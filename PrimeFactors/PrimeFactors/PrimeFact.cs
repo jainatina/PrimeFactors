@@ -11,18 +11,21 @@ namespace PrimeFactors
         public List<int> Factor(int num)
         {
             List<int> factList = new List<int>();
+            var possiblePrime = 2;
 
             if (num < 2)
             {
                 return factList;
             }
-            if (num == 2)
+
+            while (num > 1)
             {
-                factList.Add(2);
-            }
-            if (num == 3)
-            {
-                factList.Add(3);
+                while (num % possiblePrime == 0)
+                {
+                    factList.Add(possiblePrime);
+                    num = num / possiblePrime;
+                }
+                possiblePrime++;
             }
 
             return factList;

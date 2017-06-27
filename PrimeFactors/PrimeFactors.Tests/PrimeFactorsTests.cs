@@ -45,5 +45,79 @@ namespace PrimeFactors.Tests
 
         }
 
+        [TestMethod]
+        public void FactorsOfFour()
+        {
+            var expected = new List<int>() { 2, 2 };
+
+            var factors = primeFactors.Factor(4);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+
+        [TestMethod]
+        public void FactorsOfFive()
+        {
+            var expected = new List<int>() { 5 };
+
+            var factors = primeFactors.Factor(5);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+
+
+        [TestMethod]
+        public void FactorsOfSix()
+        {
+            var expected = new List<int>() { 2, 3 };
+
+            var factors = primeFactors.Factor(6);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+        [TestMethod]
+        public void FactorsOfSeven()
+        {
+            var expected = new List<int>() { 7 };
+
+            var factors = primeFactors.Factor(7);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+        [TestMethod]
+        public void FactorsOfEight()
+        {
+            var expected = new List<int>() { 2, 2, 2 };
+
+            var factors = primeFactors.Factor(8);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+        [TestMethod]
+        public void FactorsOfNine()
+        {
+            var expected = new List<int>() { 3, 3 };
+
+            var factors = primeFactors.Factor(9);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+        [TestMethod]
+        public void FactorsOf360()
+        {
+            var expected = new List<int>() { 2, 2, 2, 3, 3, 5 };
+
+            var factors = primeFactors.Factor(360);
+
+            CollectionAssert.AreEqual(expected, factors);
+
+        }
+
     }
 }
